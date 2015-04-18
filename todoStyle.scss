@@ -1,0 +1,140 @@
+* { -webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; -ms-font-smoothing:antialiased; -o-font-smoothing:antialiased; font-smoothing:antialiased; }
+$red:   rgba(224, 100, 92, 0.2);
+$dark:  #444444;
+$light: #999999;
+$blue:  #2DB6CF;
+$green: #46b98a;
+$white: #FFFFFF;
+.todoComponent {
+    
+    border-radius: 25px;
+    border: 2px solid #f9f9e9;
+    padding: 35px;
+    width: 400px;
+  	text-decoration:none;
+    background: whitesmoke;
+    font-family: "Open Sans", arial;
+
+  .todoHeader{
+    text-align: center;
+      h1 {
+
+        font-family: "Open Sans", arial;
+      }
+    }
+
+    #illegalInput {
+      background: none repeat scroll 0 0 $red;
+      color: $white;
+    }
+  
+    input {
+      background: rgba(171, 206, 212, 0.3);
+      border: 1px solid #DDD; 
+      border-radius: 5px; 
+      box-shadow: 0 0 5px #DDD inset; 
+      color: #666; 
+      outline: none; 
+      height:34px;
+      line-height:30px;
+      width: 66%; 
+      margin-left:17%;
+      font-size:16px;
+    }
+  .todoAddButton {
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 0px;
+    padding: 7px 10px;
+    text-transform: none;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    width: 17%; /* auto */
+    text-align: center; /* DELETE WHEN WIDTH AUTO */
+    background: none repeat scroll 0 0 $light;
+    color: $white;
+    float:right;
+  
+
+    &:hover {
+      background: none repeat scroll 0 0 $dark;
+      color: $white;
+    }
+    &:active {
+      position:relative;
+      top:1px;
+    }
+  }
+  .todoListContainer{
+      
+     ul {
+      list-style-type: none;
+      li {
+        line-height:34px;
+        font-size:16px;
+        
+      
+        
+        a {
+          display: inline-block;
+          background-color: transparent;
+          color: transparent;
+          margin-right: 4%;
+          margin-left:4%;
+                  
+          width: 18px;
+          height: 18px;
+          position: relative;
+          text-align: center;
+          line-height: 14px;
+          border-radius: 50%;
+          box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+          
+          &:hover{
+            text-decoration: none;
+            color: #a7a7a7;
+            background: transparent;
+          }
+          &:before{
+            content: "";
+            display: block;
+            background: transparent;
+            border-top: 2px solid #ddd;
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            bottom: -50%;
+            right: -50%;
+            z-index: -1;
+            border-radius: 50%;
+            box-shadow: inset 0px 8px 48px #ddd;
+          }
+        }
+      }
+      .hidden {
+         visibility:hidden;
+       }
+      .show {
+        display:inline;
+      }
+    }
+  }
+   .todoSubmitButton {
+     @extend .todoAddButton;
+     float: none;
+      width: 54%; 
+      margin-left:17%;
+     margin-bottom:30px;
+     visibility:hidden;
+   }
+  
+}
